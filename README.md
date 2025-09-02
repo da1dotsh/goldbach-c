@@ -1,6 +1,6 @@
+# shiradrock
 # da1dotsh
 # goldbach-c
-# muse: shiradrock
 
 Goldbach Conjecture Simple Algorithm, C Languaje
 
