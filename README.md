@@ -70,5 +70,6 @@ To execute:
 -----
 
 ## License
-
+````
 This project is licensed under the **AGPL-3.0 License**. See the `LICENSE` file for more details.
+````
