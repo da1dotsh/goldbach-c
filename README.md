@@ -1,82 +1,59 @@
+```markdown
 # Goldbach's Conjecture — C Implementation
 
 ## Authors
-
-**da1dotsh, shiradrock**
-
------
+da1dotsh, shiradrock
 
 ## Abstract
+This project presents a C language implementation inspired by **Goldbach's Conjecture**, which states that **every even number greater than 2 can be expressed as the sum of two prime numbers**.
 
-Este proyecto presenta una implementación en lenguaje C inspirada en la **Conjetura de Goldbach**, que afirma que todo número par mayor que 2 puede expresarse como la suma de dos números primos.
+The goal is didactic: to introduce students to the fundamental concepts of C programming while exploring a classic and open problem in number theory.
 
-El objetivo es didáctico: introducir a los estudiantes a los conceptos fundamentales de la programación en C, mientras se explora un problema clásico y abierto de la teoría de números.
-
------
+---
 
 ## Mathematical Background
+Goldbach's Conjecture can be formally expressed: for every even natural number $n$ such that $n > 2$, there exist two prime numbers $p$ and $q$ that satisfy $n = p + q$.
 
-La Conjetura de Goldbach puede expresarse formalmente como:
+* $N$ = set of natural numbers
+* $P$ = set of prime numbers
 
-$$\forall n \in \mathbb{N}, \quad n > 2 \ \wedge \ n \equiv 0 \pmod{2} \quad \Rightarrow \quad \exists \ p, q \in \mathbb{P} : n = p + q$$
+Although it has not been proven in general, the conjecture has been verified by computers for extremely large values of $n$.
 
-Donde:
-
-  - $\\mathbb{N}$ = conjunto de números naturales
-  - $\\mathbb{P}$ = conjunto de números primos
-
-Aunque no ha sido probada en general, la conjetura ha sido verificada por computadoras hasta valores extremadamente grandes de $n$.
-
------
+---
 
 ## Implementation Overview
+The program includes:
 
-El programa incluye:
+1.  **Input Validation:** Ensures that the user enters an even integer greater than 2.
+2.  **Prime Number Generation:** Uses trial division up to $\sqrt{n}$ to check for primality, with dynamic memory allocation for scalability.
+3.  **Pair-Finding Algorithm:** Given an ordered list of primes, the program uses a two-pointer technique to efficiently find all pairs $(p, q)$ such that $p + q = n$.
+4.  **Output:** Prints all valid pairs, along with the total number of solutions found.
 
-1.  **Validación de entrada**
-    Asegura que el usuario ingrese un número entero par mayor que 2.
-
-2.  **Generación de números primos**
-    Utiliza la división por prueba hasta $\\sqrt{n}$ para verificar la primalidad, con asignación dinámica de memoria para la escalabilidad.
-
-3.  **Algoritmo de búsqueda de pares**
-    Dada una lista ordenada de primos, el programa emplea una **técnica de dos punteros** para encontrar eficientemente todos los pares $(p, q)$ tales que:
-
-    $$
-    $$$$p + q = n
-
-    $$
-    $$$$
-    $$
-4.  **Salida**
-    Imprime todos los pares válidos, junto con el número total de soluciones encontradas.
-
------
+---
 
 ## Example Run
-
 ```
+
 Set n: 26
 NumberPrimes = 9
 3 + 23 = 26
 7 + 19 = 26
 13 + 13 = 26
 Solution Number: 3
-```
 
------
+````
+
+---
 
 ## Compilation and Execution
-
-Para compilar:
-
+To compile:
 ```bash
 gcc -o goldbach Goldbach1.4.c -lm
-```
+````
 
-El flag `-lm` enlaza la biblioteca matemática (`sqrt`, `log`).
+*The `-lm` flag links the math library (for functions like `sqrt`, `log`).*
 
-Para ejecutar:
+To execute:
 
 ```bash
 ./goldbach
@@ -86,14 +63,16 @@ Para ejecutar:
 
 ## Future Work
 
-  * Reemplazar la división por prueba con la **Criba de Eratóstenes** para un mejor rendimiento.
-  * Extender el programa para manejar entradas más grandes de manera eficiente.
-  * Comparar la efectividad de diferentes métodos de generación de primos.
-  * Añadir pruebas formales y *benchmarking*.
+  * Replace trial division with the **Sieve of Eratosthenes** for better performance.
+  * Extend the program to efficiently handle larger inputs.
+  * Compare the effectiveness of different prime generation methods.
+  * Add formal testing and benchmarking.
 
 -----
 
 ## License
 
-Este proyecto está licenciado bajo la **Licencia AGPL-3.0**.
-Consulta el archivo [LICENSE](https://www.google.com/search?q=LICENSE) para más detalles.
+This project is licensed under the **AGPL-3.0 License**. See the `LICENSE` file for more details.
+
+```
+```
