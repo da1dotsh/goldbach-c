@@ -1,4 +1,3 @@
-```markdown
 # Goldbach's Conjecture — C Implementation
 
 ## Authors
