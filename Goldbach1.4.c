@@ -22,7 +22,7 @@ void main (void){
     // Set j to point to the last prime in the array
     j = NumberPrimes - 1;
 
-    printf ("\nNumberPrimes = %i", NumberPrimes);
+    printf ("NumberPrimes = %i", NumberPrimes);
 		
     // Two-pointer approach to find pairs of primes that sum up to UserNumber
     while (i <= j) {
@@ -31,7 +31,7 @@ void main (void){
         if (sum == UserNumber) {
             // If a valid pair is found, print it and move both pointers
             NumberSolutions++;
-            printf("\n%u + %u = %u\n", p_PrimeMatrix[i], p_PrimeMatrix[j], UserNumber);
+            printf("\n%u + %u = %u", p_PrimeMatrix[i], p_PrimeMatrix[j], UserNumber);
             i++;
             j--;
         } else if (sum < UserNumber) {
@@ -115,7 +115,7 @@ unsigned int *NumberPrimesCalculator(unsigned int UserNumber, unsigned int *coun
         DivisorCounter = 0;
 				
         // Check divisibility only up to sqrt(i)
-        for(unsigned int j=3; j<=sqrt(i); j += 2){	
+        for(unsigned int j=3; j<=sqrt(i); j += 2){
             if(i%j == 0){
                 DivisorCounter = 1;
                 break;
@@ -156,6 +156,7 @@ unsigned int *NumberPrimesCalculator(unsigned int UserNumber, unsigned int *coun
         return p_PrimeMatrix;
     }	
 }
+
 
 
 
